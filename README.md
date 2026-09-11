@@ -34,66 +34,102 @@ Request:
 {
   "question": "What is FastAPI?"
 }
-{
-  "answer": "FastAPI is a modern Python web framework..."
-}
-2. Chat with AI Tutor
-
-POST /chat
-
-Request:
-
-{
-  "message": "What is Pydantic?"
-}
+```
 
 Response:
 
+```json
+{
+  "answer": "FastAPI is a modern Python web framework..."
+}
+```
+
+### 2. Chat with AI Tutor
+
+**POST** `/chat`
+
+Request:
+
+```json
+{
+  "message": "What is Pydantic?"
+}
+```
+
+Response:
+
+```json
 {
   "res": "Pydantic is used for data validation..."
 }
-Setup
-1. Clone the repository
+```
+
+## Setup
+
+### 1. Clone the repository
+
+```bash
 git clone https://github.com/manojkumarbathula/gemini-fastapi-chatbot.git
 cd gemini-fastapi-chatbot
-2. Create virtual environment
+```
+
+### 2. Create a virtual environment
+
+```bash
 python -m venv venv
-3. Activate virtual environment
+```
+
+### 3. Activate the virtual environment
 
 Windows:
 
+```bash
 venv\Scripts\activate
-4. Install dependencies
+```
+
+### 4. Install dependencies
+
+```bash
 pip install -r requirements.txt
-5. Configure environment variables
+```
 
-Create a .env file:
+### 5. Configure environment variables
 
+Create a `.env` file:
+
+```env
 GEMINI_API_KEY=your_gemini_api_key
-6. Run the application
+```
+
+Do not commit the `.env` file to GitHub.
+
+### 6. Run the application
+
+```bash
 uvicorn main:app --reload
+```
 
 Open Swagger UI:
 
+```text
 http://127.0.0.1:8000/docs
-Project Structure
-ai-fastapi-tutor/
-│
+```
+
+## Project Structure
+
+```text
+gemini-fastapi-chatbot/
 ├── main.py
 ├── requirements.txt
 ├── .gitignore
 └── README.md
-Future Improvements
-User-specific conversation history
-Persistent conversation storage
-Authentication and authorization
-Better error handling
-Production deployment
-Automated testing
+```
 
-### 3️⃣ GitHub ki push cheyyali
+## Future Improvements
 
-Save chesi:
-
-```bash
-git add README.md
+- User-specific conversation history
+- Persistent conversation storage
+- Authentication and authorization
+- Better error handling
+- Production deployment
+- Automated testing
